@@ -1,4 +1,3 @@
-require 'pry'
 def caesar_cipher(string, shift)
   shift = shift.to_i
   if shift >= 26 then
@@ -7,7 +6,6 @@ def caesar_cipher(string, shift)
   array = string.bytes
   wrap = "z".ord
   uppercase = false;
-  # if letter.ord < 91, uppercase the shifted letter
   array.each_with_index do |letter, index|
       new = letter + shift
       if (new > wrap) then  new -= 26
